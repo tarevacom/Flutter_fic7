@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_fic7_app/bloc/products/products_bloc.dart';
 import 'package:flutter_fic7_app/bloc/register/register_bloc.dart';
 import 'package:flutter_fic7_app/data/datasources/auth_local_datasource.dart';
 import 'package:flutter_fic7_app/pages/auth/auth_page.dart';
@@ -29,6 +30,9 @@ class MyApp extends StatelessWidget {
         ),
         BlocProvider(
           create: (context) => LogoutBloc(),
+        ),
+        BlocProvider(
+          create: (context) => ProductsBloc(),
         ),
       ],
       child: MaterialApp(
